@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3><%= @company["companyName"] %></h3>
+      <p><%= @company["description"] %></p>
+      <h4><%= @company["exchange"] %></h4>
+    </div>
+  </div>
+  <div class="row">
+    <% @news.each do |info| %>
+    <div class="col-md-3">
+      <h6><%= info["datetime"].to_time.strftime('%a %b %d %H:%M %Z %Y') %> |</h6> <h6><%=info["source"]%></h6>
+    </div>
+    <div class="col-md-6">
+      <h2><%= info["headline"] %></h2>
+      <p><%= info["summary"] %></p>
+    </div>
+    <div class="col-md-3">
+      <p><%= info["related"] %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
