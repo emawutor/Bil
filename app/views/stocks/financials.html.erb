@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <% @financials.each do |stock| %>
+    <div class="col-md-4">
+      <%= link_to "#{stock.ticker}",stock_path(stock) %>
+    </div>
+    <div class="col-md-4">
+      <%= number_to_currency(stock.market_cap, unit: "$")%>
+    </div>
+    <div class="col-md-4">
+      <%= number_to_currency(stock.price, unit: "$") %>
+    </div>
+    <% end %>
+  </div>
+</div>
