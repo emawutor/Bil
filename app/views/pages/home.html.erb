@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="cards">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <% link_to financials_path %>
+        <div class="sector-card">
+          <div class="card-img">
+            <%= image_tag(, width: 200, height: 150, crop: :fill, class: "card-img") %>
+          </div>
+          <div class="card-category"><%= Financials %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
